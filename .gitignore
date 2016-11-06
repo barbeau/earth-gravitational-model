@@ -1,0 +1,8 @@
+target
+release.properties
+pom.xml.releaseBackup
+.settings
+.project
+.classpath
+/.idea/
+*.iml
