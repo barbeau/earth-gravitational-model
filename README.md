@@ -1,5 +1,5 @@
 # earth-gravitational-model [![Build Status](https://travis-ci.org/barbeau/earth-gravitational-model.svg?branch=master)](https://travis-ci.org/barbeau/earth-gravitational-model)
-A Java library that makes it easy to call the [Mapzen Pelias Search API](https://mapzen.com/documentation/search/search/)
+A lightweight port of the GeoTools [EarthGravitationalModel](http://docs.geotools.org/latest/javadocs/org/geotools/referencing/operation/transform/EarthGravitationalModel.html).
 
 ### Requirements
 
