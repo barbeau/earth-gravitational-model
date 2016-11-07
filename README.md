@@ -12,7 +12,17 @@ The below example shows how to use the `EarthGravitationalModel`.
 ~~~
 EarthGravitationalModel gh = new EarthGravitationalModel();
 gh.load("/egm180.nor");
-gh.heightOffset(45, 45, 0);
+
+// GPS lat, lon, and altitude
+double lat = 45;
+double lon = 45;
+double altitudeWgs84 = 0;
+
+// Calculate the offset between the ellipsoid and geoid
+double offset = gh.heightOffset(lat, lon, altitudeWgs84);
+
+// Add the offset to the GPS altitude to get the height above the geoid (in meters)
+double altitudeMeanSeaLevel = altitudeWgs84 + offset;
 ~~~
 
 ## Compiling the code yourself
