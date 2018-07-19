@@ -53,13 +53,13 @@ public abstract class VerticalTransform extends AbstractMathTransform {
      * Returns the value to add to a <cite>height above the ellipsoid</cite> in order to get a
      * <cite>height above the geoid</cite> for the specified geographic coordinate.
      *
-     * @param longitude The geodetic longitude, in decimal degrees.
      * @param latitude  The geodetic latitude, in decimal degrees.
+     * @param longitude The geodetic longitude, in decimal degrees.
      * @param height    The height above the ellipsoid in metres.
      * @return The value to add in order to get the height above the geoid (in metres).
      * @throws Exception if the offset can't be computed for the specified coordinates.
      */
-    protected abstract double heightOffset(double longitude, double latitude, double height)
+    protected abstract double heightOffset(double latitude, double longitude, double height)
             throws Exception;
 
     /**
@@ -79,7 +79,7 @@ public abstract class VerticalTransform extends AbstractMathTransform {
             final float x, y, z;
             dstPts[dstOff + 0] = (x = srcPts[srcOff + 0]);
             dstPts[dstOff + 1] = (y = srcPts[srcOff + 1]);
-            dstPts[dstOff + 2] = (float) ((z = srcPts[srcOff + 2]) + heightOffset(x, y, z));
+            dstPts[dstOff + 2] = (float) ((z = srcPts[srcOff + 2]) + heightOffset(y, x, z));
             srcOff += step;
             dstOff += step;
         }
@@ -103,7 +103,7 @@ public abstract class VerticalTransform extends AbstractMathTransform {
             final double x, y, z;
             dstPts[dstOff + 0] = (x = srcPts[srcOff + 0]);
             dstPts[dstOff + 1] = (y = srcPts[srcOff + 1]);
-            dstPts[dstOff + 2] = (z = srcPts[srcOff + 2]) + heightOffset(x, y, z);
+            dstPts[dstOff + 2] = (z = srcPts[srcOff + 2]) + heightOffset(y, x, z);
             srcOff += step;
             dstOff += step;
         }

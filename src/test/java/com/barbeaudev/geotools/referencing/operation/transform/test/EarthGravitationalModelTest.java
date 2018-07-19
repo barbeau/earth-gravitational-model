@@ -30,6 +30,6 @@ public class EarthGravitationalModelTest extends TestCase {
         gh.load("/egm180.nor");
         assertEquals(1.505, gh.heightOffset(45, 45, 0), 0.001);
         assertEquals(1.515, gh.heightOffset(45, 45, 1000), 0.001);
-        assertEquals(46.908, gh.heightOffset(0, 45, 0), 0.001);
+        assertEquals(46.908, gh.heightOffset(45, 0, 0), 0.001);
     }
 }
