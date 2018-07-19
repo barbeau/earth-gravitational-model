@@ -26,7 +26,7 @@ double lon = 45;
 double altitudeWgs84 = 0;
 
 // Calculate the offset between the ellipsoid and geoid
-double offset = gh.heightOffset(lat, lon, altitudeWgs84);
+double offset = gh.heightOffset(lon, lat, altitudeWgs84);
 
 // Add the offset to the GPS altitude to get the height above the geoid (in meters)
 double altitudeMeanSeaLevel = altitudeWgs84 + offset;
