@@ -110,7 +110,7 @@ public final class EarthGravitationalModel extends VerticalTransform {
     private final double[] aClenshaw, bClenshaw, as;
 
     /**
-     * Temporary buffer for use by {@link VerticalTransform#heightOffset} only. Allocated once for ever
+     * Temporary buffer for use by {@link #heightOffset} only. Allocated once for ever
      * for avoiding too many objects creation / destruction.
      */
     private final double[] cr, sr, s11, s12;
@@ -296,13 +296,13 @@ public final class EarthGravitationalModel extends VerticalTransform {
      * Returns the value to add to a <cite>height above the ellipsoid</cite> in order to get a
      * <cite>height above the geoid</cite> for the specified geographic coordinate.
      *
-     * @param latitude  The geodetic latitude, in decimal degrees.
      * @param longitude The geodetic longitude, in decimal degrees.
+     * @param latitude  The geodetic latitude, in decimal degrees.
      * @param height    The height above the ellipsoid in metres.
      * @return The value to add in order to get the height above the geoid (in metres).
      * @throws Exception if the offset can't be computed for the specified coordinates.
      */
-    public double heightOffset(final double latitude, final double longitude, final double height)
+    public double heightOffset(final double longitude, final double latitude, final double height)
             throws Exception {
         /*
          * Note: no need to ensure that longitude is in [-180..+180°] range, because its value
