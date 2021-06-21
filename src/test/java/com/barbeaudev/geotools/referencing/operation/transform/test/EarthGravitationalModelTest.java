@@ -31,5 +31,8 @@ public class EarthGravitationalModelTest extends TestCase {
         assertEquals(1.505, gh.heightOffset(45, 45, 0), 0.001);
         assertEquals(1.515, gh.heightOffset(45, 45, 1000), 0.001);
         assertEquals(46.908, gh.heightOffset(0, 45, 0), 0.001);
+
+        // From GPSTest - see https://issuetracker.google.com/issues/191674805 and https://geographiclib.sourceforge.io/cgi-bin/GeoidEval?input=28.0428021%2C-82.25598206&option=Submit (matches EGM84)
+        assertEquals(-26.4920, gh.heightOffset(-82.25598, 28.04280, -5.9), 0.001);
     }
 }
