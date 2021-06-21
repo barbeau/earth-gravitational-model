@@ -10,7 +10,7 @@ The `egm180.nor` file is included in `src/main/resources` directory in this proj
 
 ### Requirements
 
-You'll need [JDK 7 or higher](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+You'll need [JDK 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 ### Usage
 
