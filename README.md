@@ -36,7 +36,7 @@ double altitudeMeanSeaLevel = altitudeWgs84 - offset;
 
 ### Setting up your environment
 
-This project was created in [IntelliJ](https://www.jetbrains.com/idea/).  You can also compile it from the command line using [Maven](https://maven.apache.org/).
+This project was created in [IntelliJ](https://www.jetbrains.com/idea/).  You can also compile it from the command line using [Gradle](https://gradle.org/).
 
 ### Getting the code
 
@@ -45,4 +45,4 @@ To get started with this project, use a Git client to clone this repository to y
 ### Build the project
 
 * IntelliJ - Clean and build the project
-* Maven - `mvn install`
+* Gradle - `./gradlew build`
