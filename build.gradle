@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+}
+
+group = 'com.barbeaudev'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '8'
