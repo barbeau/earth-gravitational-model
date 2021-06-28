@@ -1,4 +1,4 @@
-# earth-gravitational-model [![Java CI with Maven](https://github.com/barbeau/earth-gravitational-model/actions/workflows/maven.yml/badge.svg)](https://github.com/barbeau/earth-gravitational-model/actions/workflows/maven.yml)
+# earth-gravitational-model [![Java CI with Gradle](https://github.com/barbeau/earth-gravitational-model/actions/workflows/gradle.yml/badge.svg)](https://github.com/barbeau/earth-gravitational-model/actions/workflows/gradle.yml)
 A lightweight port of the GeoTools [EarthGravitationalModel](http://docs.geotools.org/latest/javadocs/org/geotools/referencing/operation/transform/EarthGravitationalModel.html) ([source code](https://github.com/geotools/geotools/blob/master/modules/plugin/referencing3D/src/main/java/org/geotools/referencing/operation/transform/EarthGravitationalModel.java)) that can be used on Android without requiring the entire GeoTools suite.
 
 From the original `EarthGravitationalModel.java` file:
