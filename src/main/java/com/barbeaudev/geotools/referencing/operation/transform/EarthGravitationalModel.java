@@ -300,10 +300,8 @@ public final class EarthGravitationalModel extends VerticalTransform {
      * @param latitude  The geodetic latitude, in decimal degrees.
      * @param height    The height above the ellipsoid in metres.
      * @return The value to add in order to get the height above the geoid (in metres).
-     * @throws Exception if the offset can't be computed for the specified coordinates.
      */
-    public double heightOffset(final double longitude, final double latitude, final double height)
-            throws Exception {
+    public synchronized double heightOffset(final double longitude, final double latitude, final double height) {
         /*
          * Note: no need to ensure that longitude is in [-180..+180°] range, because its value
          * is used only in trigonometric functions (sin / cos), which roll it as we would expect.
