@@ -46,3 +46,7 @@ To get started with this project, use a Git client to clone this repository to y
 
 * IntelliJ - Clean and build the project
 * Gradle - `./gradlew build`
+
+### License
+
+This project is a port of the GeoTools [EarthGravitationalModel](http://docs.geotools.org/latest/javadocs/org/geotools/referencing/operation/transform/EarthGravitationalModel.html) ([source code](https://github.com/geotools/geotools/blob/master/modules/plugin/referencing3D/src/main/java/org/geotools/referencing/operation/transform/EarthGravitationalModel.java)) and therefore [inherits the LGPL license from that project](https://docs.geotools.org/latest/userguide/welcome/license.html).
