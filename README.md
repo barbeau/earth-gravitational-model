@@ -12,7 +12,7 @@ Releases are published using the [GitHub Package Registry](https://docs.github.c
 
 *NOTE: You need [to authenticate with GitHub](https://github.com/TobseF/github-plugin-registry-example#enable-authentication) to download the below artifacts*
 
-Maven:
+#### Maven
 
 ```xml
 <repositories>
@@ -32,7 +32,7 @@ Maven:
 </dependency>
 ```
 
-Gradle:
+#### Gradle
 
 ```groovy
 repositories {
