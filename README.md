@@ -8,6 +8,42 @@ This class is an adaption of Fortran code <code><a href="http://earth-info.nga.m
 
 The `egm180.nor` file is included in `src/main/resources` directory in this project, which appears to be the EGM84 model.
 
+Releases are published using the [GitHub Package Registry](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle).
+
+*NOTE: You need [to authenticate with GitHub](https://github.com/TobseF/github-plugin-registry-example#enable-authentication) to download the below artifacts*
+
+Maven:
+
+```xml
+<repositories>
+    <repository>
+        <id>github</id>
+        <name>GitHub earth-gravitational-model</name>
+        <url>https://maven.pkg.github.com/barbeau/earth-gravitational-model</url>
+        <releases><enabled>true</enabled></releases>
+        <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+</repositories>
+...
+<dependency>
+    <groupId>com.barbeaudev</groupId>
+    <artifactId>earth-gravitational-model</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+Gradle:
+
+```groovy
+repositories {
+    maven { url 'https://maven.pkg.github.com/barbeau/earth-gravitational-model' }
+}
+    
+dependencies {
+    implementation 'com.barbeaudev:earth-gravitational-model:1.0.0'
+}
+```
+
 ### Requirements
 
 You'll need [JDK 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
@@ -46,6 +82,15 @@ To get started with this project, use a Git client to clone this repository to y
 
 * IntelliJ - Clean and build the project
 * Gradle - `./gradlew build`
+
+### Releases
+
+1. Change version from `x-SNAPSHOT to x`
+2. Create a tag using Git
+3. Create a GitHub release using that tag
+4. Change version from `x` to `nextversion-SNAPSHOT`
+
+The GitHub Action [publish.yml](.github/workflows/publish.yml) will then automatically create and publish a package for the [GitHub Package Registry](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle) as soon as the Release is published.
 
 ### License
 
