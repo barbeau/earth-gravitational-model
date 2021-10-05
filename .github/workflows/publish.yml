@@ -15,7 +15,10 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      - name: Build with Gradle
+        run: gradle build
       - name: Publish package
         run: gradle publish
         env:
+          GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
