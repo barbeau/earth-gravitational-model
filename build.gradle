@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'java-library'
     id 'maven-publish'
 }
 
@@ -16,6 +16,12 @@ version = '1.0.0'
 sourceCompatibility = '8'
 
 publishing {
+    publications {
+        earthGravitationalModel(MavenPublication) {
+            from components.java
+        }
+    }
+
     repositories {
         maven {
             name = "GitHubPackages"
