@@ -52,7 +52,7 @@ You'll need [JDK 8 or higher](http://www.oracle.com/technetwork/java/javase/down
 
 The below example shows how to use the `EarthGravitationalModel`.
 
-~~~
+```java
 EarthGravitationalModel gh = new EarthGravitationalModel();
 gh.load("/egm180.nor");
 
@@ -66,7 +66,7 @@ double offset = gh.heightOffset(lon, lat, altitudeWgs84);
 
 // Add the offset to the GPS altitude to get the height above the geoid (in meters)
 double altitudeMeanSeaLevel = altitudeWgs84 - offset;
-~~~
+```
 
 ## Compiling the code yourself
 
