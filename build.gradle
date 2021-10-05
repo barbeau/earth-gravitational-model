@@ -12,7 +12,7 @@ dependencies {
 }
 
 group = 'com.barbeaudev'
-version = '1.0.0'
+version = '1.0.1-SNAPSHOT'
 sourceCompatibility = '8'
 
 publishing {
