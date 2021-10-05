@@ -92,6 +92,6 @@ To get started with this project, use a Git client to clone this repository to y
 
 The GitHub Action [publish.yml](.github/workflows/publish.yml) will then automatically create and publish a package for the [GitHub Package Registry](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle) as soon as the Release is published.
 
-### License
+## License
 
 This project is a port of the GeoTools [EarthGravitationalModel](http://docs.geotools.org/latest/javadocs/org/geotools/referencing/operation/transform/EarthGravitationalModel.html) ([source code](https://github.com/geotools/geotools/blob/master/modules/plugin/referencing3D/src/main/java/org/geotools/referencing/operation/transform/EarthGravitationalModel.java)) and therefore [inherits the LGPL license from that project](https://docs.geotools.org/latest/userguide/welcome/license.html).
