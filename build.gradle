@@ -8,9 +8,22 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 group = 'com.barbeaudev'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '8'
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/barbeau/earth-gravitational-model"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
