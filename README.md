@@ -76,7 +76,7 @@ This project was created in [IntelliJ](https://www.jetbrains.com/idea/).  You ca
 
 ### Getting the code
 
-To get started with this project, use a Git client to clone this repository to your local computer.  Then, in IntelliJ import the project as a Maven project.
+To get started with this project, use a Git client to clone this repository to your local computer.  Then, in IntelliJ import the project as a Gradle project.
 
 ### Build the project
 
